@@ -79,7 +79,7 @@ function App() {
 
     setLoading(true);
     try {
-      const response = await axios.post("https://code-sense-backend-8lbb.onrender.com", { code, language });
+      const response = await axios.post("https://code-sense-backend-8lbb.onrender.com/ai/get-review", { code, language });
       setReview(response.data);
     } catch (error) {
       console.error(error);
