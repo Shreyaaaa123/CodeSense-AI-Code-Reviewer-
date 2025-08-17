@@ -61,8 +61,8 @@ function App() {
       return;
     }
     if (!isValidCode(code, language)) {
-      setReview("❌ Invalid code. Please write valid JavaScript / ReactJS syntax.");
-    } else if (language !== "javascript" && language !== "react" && isProbablyInvalid(code)) {
+      setReview("❌ Invalid code. Please write valid JavaScript syntax.");
+    } else if (language !== "javascript" && isProbablyInvalid(code)) {
       setReview("❌ Invalid code. Please write proper code syntax.");
     } else {
       setReview("");
@@ -104,7 +104,6 @@ function App() {
           {/* Language Selector */}
           <select value={language} onChange={(e) => setLanguage(e.target.value)}>
             <option value="javascript">JavaScript</option>
-            <option value="react">ReactJS</option>
             <option value="python">Python</option>
             <option value="java">Java</option>
             <option value="cpp">C++</option>
