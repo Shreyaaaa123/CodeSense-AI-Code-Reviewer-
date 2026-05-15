@@ -89,13 +89,12 @@ async function reviewCode() {
 
   try {
 
-    const response = await axios.post(
-      "https://code-sense-backend-8lbb.onrender.com/ai/get-review",
-      {
-        code: `Language: ${language}\n\nCode:\n${code}`,
-      }
-    );
-
+  const response = await axios.post(
+  "https://code-sense-backend-8lbb.onrender.com/ai/get-review",
+  {
+    code: `Language: ${language}\n\nCode:\n${code}`,
+  }
+);
     setReview(response.data);
 
   } catch (error) {
